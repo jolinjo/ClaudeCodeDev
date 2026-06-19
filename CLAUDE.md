@@ -78,7 +78,7 @@ CODESYS V3.5 SP22 + SoftMotion 標準控制庫專案。
 
 ### 環境
 
-- CODESYS：`C:\Program Files\CODESYS 3.5.22.0\CODESYS\Common\CODESYS.exe`，profile `CODESYS V3.5 SP22`。
+- CODESYS：`C:\Program Files\CODESYS 3.5.22.10\CODESYS\Common\CODESYS.exe`，profile `CODESYS V3.5 SP22 Patch 1`。（注意：`3.5.22.0` 目錄只有 base DLL、沒有 CODESYS.exe；實際 IDE 在 patch 版 `3.5.22.10`。）
 - Node 為可攜式版，位於 `C:\tools\node`（系統未裝 Node，請用此處的 `npm.cmd` / `node.exe`）。
 - MCP 設定在 `.mcp.json`；改完需重啟 Claude Code 才會載入。
 - git 身分：Jason.Lin / jolinjo@gmail.com。
