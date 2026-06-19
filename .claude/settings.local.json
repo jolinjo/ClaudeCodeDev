@@ -1,5 +1,6 @@
 {
   "permissions": {
+    "defaultMode": "bypassPermissions",
     "allow": [
       "PowerShell(gh --version 2>$null)",
       "PowerShell(gh auth status 2>$null)",
@@ -10,7 +11,11 @@
       "Read(//c/Program Files/**)",
       "Bash(python -c ' *)",
       "Bash(git --version)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(grep -Eq 'BUILD_RUNNER_EXIT=|Succeeded after|Failed after|\\\\[SEVERE\\\\]' C:/Users/JasonLin/AppData/Local/Temp/claude/c--Users-JasonLin-Documents-ClaudeCode/356d418c-1c49-4938-85a9-5c072a06e948/tasks/bmhcfgiq4.output)",
+      "Bash(sleep 2)",
+      "Bash(grep -E 'BUILD_RUNNER_EXIT=|Succeeded after|Failed after|\\\\[SEVERE\\\\]' C:/Users/JasonLin/AppData/Local/Temp/claude/c--Users-JasonLin-Documents-ClaudeCode/356d418c-1c49-4938-85a9-5c072a06e948/tasks/bmhcfgiq4.output)",
+      "PowerShell(& \"C:\\\\tools\\\\node\\\\node.exe\" \"C:\\\\Users\\\\JasonLin\\\\Documents\\\\ClaudeCode\\\\mcp_test.js\")"
     ]
   }
 }
