@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(gh --version 2>$null)",
+      "PowerShell(gh auth status 2>$null)",
+      "Bash(cd /c/Users/JasonLin/Documents/ClaudeCode/CodesysDemoProject && echo \"=== full tree \\(depth 3\\) ===\" && find . -not -path './.git/*' -maxdepth 3 | sort && echo \"\" && echo \"=== .gitignore ===\" && cat .gitignore && echo \"\" && echo \"=== .gitattributes ===\" && cat .gitattributes)",
+      "Read(//c/c/Users/JasonLin/Documents/ClaudeCode/**)",
+      "Read(//c/Users/JasonLin/**)",
+      "Read(//c/Users/JasonLin/Downloads/**)",
+      "Read(//c/Program Files/**)",
+      "Bash(python -c ' *)",
+      "Bash(git --version)",
+      "WebFetch(domain:github.com)"
+    ]
+  }
+}

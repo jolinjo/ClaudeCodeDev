@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "codesys": {
+      "command": "C:\\tools\\node\\node.exe",
+      "args": [
+        "C:\\tools\\node\\node_modules\\@codesys\\mcp-toolkit\\dist\\bin.js",
+        "--codesys-path",
+        "C:\\Program Files\\CODESYS 3.5.22.0\\CODESYS\\Common\\CODESYS.exe",
+        "--codesys-profile",
+        "CODESYS V3.5 SP22",
+        "--workspace",
+        "C:\\Users\\JasonLin\\Documents\\ClaudeCode\\CodesysDemoProject"
+      ]
+    }
+  }
+}

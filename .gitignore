@@ -1,0 +1,4 @@
+# 子專案目錄（各自獨立管理，不納入開發環境 repo）
+/CodesysDemoProject/
+/HMI_Fultter/
+/OPCUA-Getway/
