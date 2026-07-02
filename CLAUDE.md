@@ -82,3 +82,17 @@ CODESYS V3.5 SP22 + SoftMotion 標準控制庫專案。
 - Node 為可攜式版，位於 `C:\tools\node`（系統未裝 Node，請用此處的 `npm.cmd` / `node.exe`）。
 - MCP 設定在 `.mcp.json`；改完需重啟 Claude Code 才會載入。
 - git 身分：Jason.Lin / jolinjo@gmail.com。
+
+---
+
+## Project: qet-mcp（AI 畫電氣圖）
+
+- **用 qet MCP 工具或改 qet-mcp/ 之前，先讀 `qet-mcp/docs/AI-GUIDE.md`**
+  （工具目錄、黃金工作流、佈局規範、實戰陷阱）。
+- **自動維護文件，不需使用者提醒**：新增/修改工具、驗證新元件、發現新陷阱時，
+  同步更新 AI-GUIDE.md、README 里程碑、data/aliases.json（+synonyms.json）。
+- 相關 repo：`qet-mcp/`（工具鏈，jolinjo/qet-mcp）、`QET-qeletrotech/`
+  （QET fork，jolinjo/QET，分支 QT6-MCP；原則：fork 改動越少越好）。
+- commit 中文說明；QET fork 另需 CMakeLists patch 版本 +1；commit 前跑
+  `qet-mcp/tests/test_roundtrip.py` 確認綠燈。
+- server.py 改動需使用者 /mcp reconnect 才生效，改完要主動提醒。
