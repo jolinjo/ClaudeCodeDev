@@ -11,6 +11,16 @@
         "--workspace",
         "C:\\Users\\JasonLin\\Documents\\ClaudeCode\\CodesysDemoProject"
       ]
+    },
+    "qet": {
+      "command": "python3",
+      "args": [
+        "/Users/jason_m3max/Documents/ClaudeCodeDev/qet-mcp/server.py"
+      ],
+      "env": {
+        "QET_BINARY": "/Users/jason_m3max/Documents/ClaudeCodeDev/QET-qeletrotech/build/qelectrotech",
+        "QET_ELEMENTS_DIR": "/Users/jason_m3max/Documents/ClaudeCodeDev/QET-qeletrotech/elements"
+      }
     }
   }
 }
