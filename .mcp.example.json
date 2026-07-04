@@ -1,0 +1,46 @@
+{
+  "_README": [
+    "這是範本檔，Claude Code 不會載入它（只載入 .mcp.json）。",
+    "實際的 .mcp.json 不進版控（見 .gitignore），每台機器保留自己的絕對路徑。",
+    "使用方式：把本檔複製成 .mcp.json，再依你的作業系統填入下方對應路徑。",
+    "",
+    "[codesys] 只有 Windows 可用（CODESYS 是 Windows 軟體）。Mac 上請刪除整個 codesys 區塊。",
+    "[qet] Windows / Mac 皆可，但 qet-mcp 與 QElectroTech 執行檔路徑各機不同，請自行調整。",
+    "",
+    "== Windows 範例路徑 ==",
+    "  codesys command : C:/tools/node/node.exe",
+    "  codesys bin.js  : C:/tools/Codesys_MCP/dist/bin.js",
+    "  CODESYS exe     : C:/Program Files/CODESYS 3.5.22.10/CODESYS/Common/CODESYS.exe",
+    "  profile         : CODESYS V3.5 SP22 Patch 1",
+    "",
+    "== macOS 範例路徑 ==",
+    "  qet command     : python3",
+    "  qet server.py   : /Users/<user>/Documents/ClaudeCodeDev/qet-mcp/server.py",
+    "  QET_BINARY      : /Users/<user>/Documents/ClaudeCodeDev/QET-qeletrotech/build/qelectrotech.app/Contents/MacOS/qelectrotech",
+    "  QET_ELEMENTS_DIR: /Users/<user>/Documents/ClaudeCodeDev/QET-qeletrotech/elements"
+  ],
+  "mcpServers": {
+    "codesys": {
+      "command": "<NODE_EXE>",
+      "args": [
+        "<CODESYS_MCP_BIN_JS>",
+        "--codesys-path",
+        "<CODESYS_EXE>",
+        "--codesys-profile",
+        "<CODESYS_PROFILE>",
+        "--workspace",
+        "<CODESYS_WORKSPACE_DIR>"
+      ]
+    },
+    "qet": {
+      "command": "python3",
+      "args": [
+        "<QET_MCP_DIR>/server.py"
+      ],
+      "env": {
+        "QET_BINARY": "<QELECTROTECH_EXECUTABLE>",
+        "QET_ELEMENTS_DIR": "<QET_ELEMENTS_DIR>"
+      }
+    }
+  }
+}

@@ -1,6 +1,5 @@
 {
   "permissions": {
-    "defaultMode": "bypassPermissions",
     "allow": [
       "PowerShell(gh --version 2>$null)",
       "PowerShell(gh auth status 2>$null)",
@@ -15,7 +14,37 @@
       "Bash(grep -Eq 'BUILD_RUNNER_EXIT=|Succeeded after|Failed after|\\\\[SEVERE\\\\]' C:/Users/JasonLin/AppData/Local/Temp/claude/c--Users-JasonLin-Documents-ClaudeCode/356d418c-1c49-4938-85a9-5c072a06e948/tasks/bmhcfgiq4.output)",
       "Bash(sleep 2)",
       "Bash(grep -E 'BUILD_RUNNER_EXIT=|Succeeded after|Failed after|\\\\[SEVERE\\\\]' C:/Users/JasonLin/AppData/Local/Temp/claude/c--Users-JasonLin-Documents-ClaudeCode/356d418c-1c49-4938-85a9-5c072a06e948/tasks/bmhcfgiq4.output)",
-      "PowerShell(& \"C:\\\\tools\\\\node\\\\node.exe\" \"C:\\\\Users\\\\JasonLin\\\\Documents\\\\ClaudeCode\\\\mcp_test.js\")"
+      "PowerShell(& \"C:\\\\tools\\\\node\\\\node.exe\" \"C:\\\\Users\\\\JasonLin\\\\Documents\\\\ClaudeCode\\\\mcp_test.js\")",
+      "Skill(fewer-permission-prompts)",
+      "Skill(fewer-permission-prompts:*)",
+      "Bash(ls -la .claude/)",
+      "Bash(cat .claude/settings.json)",
+      "Bash(cat .claude/settings.local.json)",
+      "PowerShell(& C:\\flutter\\bin\\flutter.bat*)",
+      "PowerShell(& C:\\flutter\\bin\\dart.bat*)",
+      "PowerShell(& C:\\Program Files\\Git\\cmd\\git.exe*)",
+      "Bash(/c/Program Files/Git/cmd/git.exe *)",
+      "PowerShell(Get-Process*)",
+      "PowerShell(Get-NetTCPConnection*)",
+      "PowerShell(Test-NetConnection*)",
+      "PowerShell(Get-ChildItem*)",
+      "PowerShell(Stop-Process*)",
+      "mcp__codesys__open_project",
+      "Bash(cd /c/tools/node/node_modules/@codesys/mcp-toolkit/dist 2>/dev/null && ls -la && echo \"=== grep compile/error handling ===\" && grep -rin \"compile\\\\|error\\\\|message\\\\|GetMessage\\\\|gErrorList\\\\|warning\" *.js 2>/dev/null | grep -i \"compile\\\\|getmessage\\\\|errorlist\\\\|messagestore\" | head -40)",
+      "Read(//c/tools/node/node_modules/@codesys/mcp-toolkit/dist/**)"
+    ],
+    "defaultMode": "bypassPermissions"
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -Command \"Copy-Item 'C:/Users/JasonLin/Documents/ClaudeCode/CodesysDemoProject/docs/alarm_messages_*.csv' 'C:/Users/JasonLin/Documents/ClaudeCode/HMI_Fultter/flutter/frontend/assets/' -Force; Copy-Item 'C:/Users/JasonLin/Documents/ClaudeCode/CodesysDemoProject/docs/HMI_FrontendAlarmGuide.md' 'C:/Users/JasonLin/Documents/ClaudeCode/HMI_Fultter/doc/' -Force\""
+          }
+        ]
+      }
     ]
   }
 }

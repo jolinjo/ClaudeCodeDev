@@ -8,3 +8,7 @@
 /clickup全端站台/
 .DS_Store
 HjLz4d5yZVIMgTEVYgek4A==
+
+# 本機專屬的 MCP 設定（含各機器絕對路徑）— 改用 .mcp.example.json 當範本
+.mcp.json
+/QET/
