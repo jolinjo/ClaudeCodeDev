@@ -15,18 +15,25 @@
 
 ## 排除的子專案
 
-下列目錄存在於工作目錄，但**不**納入此 repo：
+下列目錄存在於工作目錄，各自有獨立 repo，**不**納入此處（已於 `.gitignore` 排除）。
+此 repo 同時被一台 Windows 與一台 Mac 使用，因此清單涵蓋兩台的子專案：
 
 - `CodesysDemoProject/` — CODESYS V3.5 SP22 + SoftMotion 範例專案
-- `HMI_Fultter/` — HMI（Flutter）
+- `HMI_Fultter/`、`HMI-Flutter/` — HMI（Flutter）
 - `OPCUA-Getway/` — OPC UA 閘道
+- `qet-mcp/` — QET MCP 工具鏈（`jolinjo/qet-mcp`）
+- `QET-qeletrotech/` — QElectroTech fork（`jolinjo/QET`，分支 `QT6-MCP`）
+- `QET/` — 本機 QElectroTech 目錄
+- `clickup全端站台/` — ClickUp 全端站台
 
 ## 環境需求（重建開發環境時）
 
 - **Claude Code**
-- **CODESYS** V3.5 SP22：`C:\Program Files\CODESYS 3.5.22.0\CODESYS\Common\CODESYS.exe`（profile `CODESYS V3.5 SP22`）
+- **CODESYS** V3.5 SP22 Patch 1：`C:\Program Files\CODESYS 3.5.22.10\CODESYS\Common\CODESYS.exe`（profile `CODESYS V3.5 SP22 Patch 1`）
+  （注意：`3.5.22.0` 目錄只有 base DLL、沒有 CODESYS.exe；實際 IDE 在 patch 版 `3.5.22.10`）
 - **Node.js**：可攜式版放在 `C:\tools\node`
-- **CODESYS MCP toolkit**：`@codesys/mcp-toolkit`（npm 全域裝在 `C:\tools\node`）
+- **CODESYS MCP toolkit**：進入點 `C:\tools\Codesys_MCP\dist\bin.js`
+- **qet MCP**（Mac 端）：`python3` + `qet-mcp/server.py`，需 QElectroTech fork 的執行檔
 
 ## MCP 設定（`.mcp.json`）
 
